@@ -1,6 +1,4 @@
 <template>
-  <div class="footer-wrapper">
-
   <div class="footer">
     <section>LOGO</section>
 
@@ -60,21 +58,16 @@
       </div>
     </section>
   </div>
-  </div>
 </template>
 
 <style scoped>
 /* ========== WRAPPER ========== */
-.footer-wrapper {
-  background-color: #334;
-  margin: 0 -100vh;
-  padding: 0 100vh;
-}
 .footer {
   max-width: var(--content-width);
   padding: 3rem 2rem 1rem;
   margin: 0 auto -2rem;
 
+  background-color: #334;
   color: var(--bg);
 }
 
