@@ -19,7 +19,6 @@
   max-width: var(--content-width);
   margin: 7rem auto 5rem;
   padding-inline: 2rem;
-  overflow-x: hidden;
 }
 </style>
 
