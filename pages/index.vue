@@ -1,6 +1,14 @@
+[warn] --jsx-bracket-same-line is deprecated.
+[warn] Ignored unknown option --loglevel=error. Did you mean --log-level?
+[warn] Ignored unknown option --stdin.
+[warn] --jsx-bracket-same-line is deprecated. [warn] Ignored unknown option
+--loglevel=error. Did you mean --log-level? [warn] Ignored unknown option
+--stdin. [warn] --jsx-bracket-same-line is deprecated. [warn] Ignored unknown
+option --loglevel=error. Did you mean --log-level? [warn] Ignored unknown option
+--stdin.
 <template>
   <main>
-    <section id="masthead" :style="{ 'min-height': windowHeight + 'px' }">
+    <section id="masthead" :style="{'min-height': windowHeight + 'px'}">
       <div class="profile">
         <img
           class="image scroll-hidden"
@@ -16,34 +24,7 @@
         </div>
       </div>
 
-      <ul class="contact scroll-hidden" style="--delay: 500ms">
-        <li>
-          <a
-            href="mailto:t.xuyuan@gmail.com"
-            onclick="javascript:window.open('mailto:t.xuyuan@gmail.com', 'mail');event.preventDefault()"
-            target="_blank"
-            ><IconMail />Personal&nbsp;Email (preferred)</a
-          >
-        </li>
-        <li>
-          <a
-            href="mailto:191519R@student.hci.edu.sg"
-            onclick="javascript:window.open('mailto:191519R@student.hci.edu.sg', 'mail');event.preventDefault()"
-            target="_blank"
-            ><IconMail />Institution&nbsp;Email</a
-          >
-        </li>
-        <li>
-          <a href="https://github.com/txuyuan" target="_blank"
-            ><IconGithub />Github</a
-          >
-        </li>
-        <li>
-          <a href="https://www.instagram.com/t.xuyuan/" target="_blank"
-            ><IconInstagram />Instagram</a
-          >
-        </li>
-      </ul>
+      <Contacts />
 
       <div class="scroll-wrapper scroll-hidden" style="--delay: 750ms">
         <div class="scroll"></div>
@@ -55,7 +36,10 @@
       <h2 class="scroll-hidden">Experience</h2>
 
       <div class="deck">
-        <NuxtLink class="card scroll-hidden" to="/projects/garuda-robotics">
+        <NuxtLink
+          class="card card-double scroll-hidden"
+          to="/projects/garuda-robotics"
+        >
           <img class="image" src="/images/mydronefleets.png" />
           <div class="info">
             <div class="metadata">
@@ -63,6 +47,37 @@
               <h4>2022</h4>
             </div>
             <h3>Garuda Robotics - Airspace management for UAVS</h3>
+            <div class="tags">
+              <span>Backend</span>
+              <span>JavaScript</span>
+              <span>OneMap SG</span>
+              <span>MongoDB</span>
+            </div>
+            <SeeMore />
+          </div>
+        </NuxtLink>
+      </div>
+    </section>
+
+    <section>
+      <a id="projects" class="scroll-id"></a>
+      <h2 class="scroll-hidden">Projects</h2>
+
+      <div class="deck">
+        <NuxtLink class="card scroll-hidden" to="/projects/musicalrooms">
+          <img class="image" src="/images/musicalrooms.png" />
+
+          <div class="info">
+            <div class="metadata">
+              <h4>Project & Website</h4>
+              <h4>2023 - 2024</h4>
+            </div>
+            <h3>International Youth Science Forum 2024</h3>
+            <div class="tags">
+              <span>Photography</span>
+              <span>Vue/Nuxt</span>
+              <span>UI/UX</span>
+            </div>
             <SeeMore />
           </div>
         </NuxtLink>
@@ -71,40 +86,49 @@
           <img class="image" src="/images/musicalrooms.png" />
           <div class="info">
             <div class="metadata">
-              <h4>Mobile App (Educational)</h4>
-              <h4>2021 - 2022</h4>
+              <h4>Web App</h4>
+              <h4>2023</h4>
             </div>
-            <h3>MusicalRooms - Educational toolbox for Music Theory</h3>
+            <h3>AITuitionCher - <br />Tuition Assistant for SG Students</h3>
+            <div class="tags">
+              <span>Vue/Nuxt</span>
+              <span>Flask</span>
+              <span>GPT3.5</span>
+            </div>
             <SeeMore />
           </div>
         </NuxtLink>
 
-        <NuxtLink class="card scroll-hidden" to="/projects/aquarium-insider">
-          <img class="image" src="/images/aquarium_insider.png" />
+        <NuxtLink class="card scroll-hidden" to="/projects/musicalrooms">
+          <img class="image" src="/images/musicalrooms.png" />
           <div class="info">
             <div class="metadata">
-              <h4>Website (Educational)</h4>
-              <h4>2022</h4>
+              <h4>Web App</h4>
+              <h4>2023 - 2024</h4>
             </div>
-            <h3>Aquarium Insider - All you need for aquarium care</h3>
+            <h3>Titration! - <br />Teaching Tool for Science Practical</h3>
+            <div class="tags">
+              <span>ML/AI</span>
+              <span>YOLO</span>
+              <span>efficientX3D</span>
+            </div>
             <SeeMore />
           </div>
         </NuxtLink>
 
-        <NuxtLink
-          class="card scroll-hidden"
-          to="/projects/trace-together-alternative"
-        >
-          <img class="image" src="/images/tta_code.png" />
+        <NuxtLink class="card scroll-hidden" to="/projects/musicalrooms">
+          <img class="image" src="/images/musicalrooms.png" />
           <div class="info">
             <div class="metadata">
               <h4>Mobile App</h4>
-              <h4>2021</h4>
+              <h4>2021 - 2022</h4>
             </div>
-            <h3>
-              Trace Together Alternative (TTA) - An exploration into contact
-              tracing technology
-            </h3>
+            <h3>MusicalRooms - <br />Educational toolbox for Music Theory</h3>
+            <div class="tags">
+              <span>iOS</span>
+              <span>Swift UI</span>
+              <span>UI/UX</span>
+            </div>
             <SeeMore />
           </div>
         </NuxtLink>
@@ -190,80 +214,18 @@
       </div>
     </section>
 
-    <section>
-      <h2 class="scroll-hidden">Academic Timeline</h2>
-
-      <div class="timeline">
-        <span class="comment right scroll-hidden">2023 - present</span>
-        <div class="elm left scroll-hidden">
-          <h3>Hwa Chong Junior College</h3>
-          <p>
-            Subjects offered : Physics (H2), Computing (H2), Math (H2),
-            Economics (H2), GP (H1) and PW (H1)
-          </p>
-        </div>
-
-        <span class="comment left scroll-hidden">2019 - 2022</span>
-        <div class="elm right scroll-hidden">
-          <h3>Hwa Chong High School</h3>
-          <p>
-            Subjects offered: Physics, Chemistry, Math, Higher Chinese, English,
-            History and Social Studies
-          </p>
-        </div>
-
-        <span class="comment right scroll-hidden">2016 - 2018</span>
-        <div class="elm left scroll-hidden">
-          <h3>Nan Hua Primary School</h3>
-        </div>
-
-        <span class="comment left scroll-hidden">2013 - 2015</span>
-        <div class="elm right scroll-hidden">
-          <h3>Rulang Primary School</h3>
-        </div>
-      </div>
-    </section>
-
     <a id="contact" class="scroll-id"></a>
     <section>
       <h2 class="scroll-hidden">Contact Me</h2>
-
-      <ul class="contact scroll-hidden">
-        <li style="--delay: 0ms">
-          <a
-            href="mailto:t.xuyuan@gmail.com"
-            onclick="javascript:window.open('mailto:t.xuyuan@gmail.com', 'mail');event.preventDefault()"
-            target="_blank"
-            ><IconMail />Personal&nbsp;Email (preferred)</a
-          >
-        </li>
-        <li style="--delay: 50ms">
-          <a
-            href="mailto:191519R@student.hci.edu.sg"
-            onclick="javascript:window.open('mailto:191519R@student.hci.edu.sg', 'mail');event.preventDefault()"
-            target="_blank"
-            ><IconMail />Institution&nbsp;Email</a
-          >
-        </li>
-        <li style="--delay: 100ms">
-          <a href="https://github.com/txuyuan" target="_blank"
-            ><IconGithub />Github</a
-          >
-        </li>
-        <li style="--delay: 150ms">
-          <a href="https://www.instagram.com/t.xuyuan/" target="_blank"
-            ><IconInstagram />Instagram</a
-          >
-        </li>
-      </ul>
+      <Contacts />
     </section>
   </main>
 </template>
 
 <style scoped>
-@import "~/assets/css/masthead.css";
-@import "~/assets/css/cards.css";
-@import "~/assets/css/timeline.css";
+@import '~/assets/css/masthead.css';
+@import '~/assets/css/cards.css';
+@import '~/assets/css/timeline.css';
 
 main {
   text-align: center;
@@ -301,8 +263,8 @@ ul {
 </style>
 
 <script setup>
-import EmailIcon from "vue-material-design-icons/Email.vue";
-import { ref, onMounted } from "vue";
+import EmailIcon from 'vue-material-design-icons/Email.vue';
+import {ref, onMounted} from 'vue';
 
 let windowHeight = ref(6000);
 

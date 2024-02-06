@@ -41,11 +41,3 @@
   opacity: 1;
   transform: none;
 }
-.scroll-hidden {
-  opacity: 0;
-  transform: translateY(25px);
-  transition-property: opacity, transform;
-  transition-duration: 500ms;
-  transition-timing-function: ease-in-out;
-  transition-delay: var(--delay);
-}
