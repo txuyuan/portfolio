@@ -12,6 +12,10 @@
   aspect-ratio: 7/10;
   color: var(--bg);
   overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 .card * {
   position: relative;
@@ -54,26 +58,38 @@
 .card .metadata {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
   justify-content: space-between;
   margin-top: 1.5rem;
 }
-.card .metadata h4 {
+.card .metadata h4, .card .tags * {
   font-weight: 600;
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
   width: 60%;
+  white-space: nowrap;
+  margin-block: 0;
 }
 .card .metadata h4 + h4 {
   text-align: right;
 }
+.card .tags {
+  display: flex;
+  flex-direction: column;
+}
+.card .tags * {
+  padding-block: 0.2rem;
+  width: 4rem;
+}
+.card .tags * + * {
+  border-top: 1px solid var(--bg);
+}
 .card h3 {
   font-weight: 600;
-  width: 80%;
-  line-height: 1.75em;
-  font-size: 22px;
+  line-height: 1.125em;
+  font-size: 24px;
 }
 .card .link {
   display: block;
@@ -90,6 +106,15 @@
   transform: translateY(0);
 }
 
+@media screen and (min-width: 600px) {
+  .card {
+    aspect-ratio: 9/9
+  }
+  .card .info h3 {
+  font-size: 32px;
+  }
+}
+
 @media screen and (min-width: 800px) {
   .deck {
     grid-template-columns: repeat(2, 1fr);
@@ -98,12 +123,16 @@
   .card {
     aspect-ratio: 7/9;
   }
+  .card-double {
+    grid-column: span 2;
+    aspect-ratio: 18/9;
+  }
   .card .metadata h4 {
     letter-spacing: 0.2rem;
   }
   .card .info h3 {
-    margin-top: 3rem;
-    font-size: 26px;
+    margin-top: 2.5rem;
+    font-size: 32px;
   }
 }
 @media screen and (min-width: 1200px) {
