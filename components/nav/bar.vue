@@ -184,11 +184,9 @@ function menuClick() {
   margin-bottom: 1.5rem;
   color: rgba(var(--fg-rgb), 0.6);
   transition: 200ms color ease-in-out;
-  text-decoration: none;
 }
 .menu .links *:hover {
   color: var(--fg);
-  text-decoration: none;
 }
 .menu .links *:hover::after {
   display: none;

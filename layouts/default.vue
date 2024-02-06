@@ -24,27 +24,12 @@
 
 <script setup>
 import { ref, onMounted, onUpdated } from "vue";
-
-import { gsap } from "gsap"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-
 const height = ref(0);
 onMounted(() => {
   height.value = window.innerHeight * 0.7;
 });
 
 const displayScroll = ref(false);
-
-gsap.registerPlugin(ScrollTrigger)
-
-gsap.from(".scroll-hidden", {
-  scrollTrigger: ".scroll-hidden",
-  opacity: 0,
-  y: 25,
-  duration: 0.5,
-  ease: "power1.out",
-  stagger: 0.1
-})
 
 const observerSuccess = ref(false);
 const watchScrollAnim = () => {
